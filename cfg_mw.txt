@@ -1,3 +1,5 @@
+vlan 11111
+
 spawn ssh nmsuser@172.31.128.52
 Password: 
 Last login: Fri Jul 31 17:46:33 2015 from 172.31.240.83Oracle Corporation      SunOS 5.10      Generic Patch   January 2005
