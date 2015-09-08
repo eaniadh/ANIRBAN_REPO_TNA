@@ -1,7 +1,6 @@
 spawn ssh nmsuser@172.31.128.52
 Password: 
-Last login: Fri Jul 31 17:46:33 2015 from 172.31.240.83
-Oracle Corporation      SunOS 5.10      Generic Patch   January 2005
+Last login: Fri Jul 31 17:46:33 2015 from 172.31.240.83Oracle Corporation      SunOS 5.10      Generic Patch   January 2005
 Oracle Corporation      SunOS 5.10      Generic Patch   January 2005
 $ telnet 10.70.146.41
 Trying 10.70.146.41...
@@ -10,6 +9,7 @@ enable
 ericsson
 cliunlock
 Eri#css$oN@2
+vlan 1100
 show running-config
 exit
 write
