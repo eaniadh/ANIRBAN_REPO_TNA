@@ -1059,7 +1059,7 @@ bridge wfq-weight 7 1
 ! eth
 interface ethernet-eps 1/0/1 lan
  alias 40670F1
- usage bridge-port 3
+ usage bridge-port 5
  lan
   no shutdown
   no trapenable
@@ -1106,6 +1106,7 @@ interface ethernet-eps 1/0/1 lan
   exit
  exit
 interface ethernet-eps 1/0/3 lan
+ alias 30076F1
  no usage
  lan
   shutdown
