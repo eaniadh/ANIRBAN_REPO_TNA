@@ -16,7 +16,7 @@ AUTHENTICATION : NONE
 
 require_once("./lib/nusoap.php");
 //require_once("/tna_app/lib/mailer.php");
-//require_once("/tna_app/lib/config.php");
+require_once("/tna_app/lib/config.php");
 
 
 $path_parts = pathinfo(__FILE__);
@@ -77,6 +77,8 @@ class WrapperSoapClient {
 				//$log->writeLog("[$filename] : Suitable Soap Client not present in namespace...");
 		}
 	}
+	
+	public function sendRequest($method, $params) {}
 	
 	public function wrapperGetAllSubnetworkConnections ( $bodyParm, $headerParam  ) {
 		
