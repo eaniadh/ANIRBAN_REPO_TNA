@@ -14,7 +14,7 @@ AUTHENTICATION : NONE
 // http://stackoverflow.com/questions/18125751/php-nusoap-soap-request-not-working -- Adding soap Header
 // http://php.net/manual/en/soapclient.setsoapheaders.php
 
-require_once("./lib/nusoap.php");
+require_once("../lib/nusoap.php");
 //require_once("/tna_app/lib/mailer.php");
 require_once("/tna_app/lib/config.php");
 
@@ -43,11 +43,9 @@ class WrapperSoapClient {
 	
 	function __construct( $webServiceUrl ) {
 		
-		
 		$this->webServiceUrl = $webServiceUrl;
 		
 		if ( class_exists("nusoap_client") ) {
-			
 			
 			$this->isSoapClientExists = TRUE;
 			
@@ -56,49 +54,68 @@ class WrapperSoapClient {
 			
 			$err = $this->client->getError();
 			
-			// Check for a SOAP ERROR
+			// Check for a SOAP Constructor ERROR
 			if ($err) {
 				$this->isAnySoapError=TRUE;
 				echo "Soap Constructor error...";
 				//log->writeLog("[$filename] : Soap Constructor error " . $err . " while calling service at " . $this->webServiceUrl );
+				throw new Exception($err);
 			}
 			
 			// Check for a SOAP fault
 			if ($this->client->fault) {
 				$this->isAnySoapError=TRUE;
-				echo " Soap fault present...";
+				echo "SOAP Fault while calling service ". $this->client->fault['faultstring'];
 				//log->writeLog("[$filename] : Soap fault present while calling service at " . $this->webServiceUrl );
+				throw new Exception("SOAP Fault while calling service...");
 			} else {
 				echo "<h2> SUCCESS : in accessing service at : ". $this->webServiceUrl ."</h2>";
 				//$log->writeLog("[$filename] : SUCCESS in accessing service at ". $this->webServiceUrl);
 			}
 		} else {
-				echo "ERROR...";
+				echo "Suitable Soap Client not present in namespace...";
 				//$log->writeLog("[$filename] : Suitable Soap Client not present in namespace...");
+				throw new Exception("Suitable Soap Client not present in namespace...");
 		}
 	}
 	
-	public function sendRequest($method, $params) {}
+	public function sendRequest($method, $params) {
+		
+		// PC(coding.....) -> GIT REPO Commit --> Reflection BALI Checkout/Clone --> Test BALI
+	}
 	
 	public function wrapperGetAllSubnetworkConnections ( $bodyParm, $headerParam  ) {
 		
 		// function call($operation,$params=array(),$namespace='http://tempuri.org',$soapAction='',$headers=false,$rpcParams=null,$style='rpc',$use='encoded')
 
 		$result=NULL;
-		if ( $this->isSoapClientExists && !$this->isAnySoapError && !is_null ($bodyParm)) {
+		if ( $this->isSoapClientExists && !$this->isAnySoapError && !is_null ($bodyParm) && !is_null ($headerParam) ) {
 			
-			 $result = $this->client->call('getAllSubnetworkConnections', $bodyParm, '', '', $headerParam, true);	
+			$this->client->setHeaders($headerParam);
+			//$result = $this->client->call('getAllSubnetworkConnections', $bodyParm, '', '', $headerParam, true);	
+				$result = $this->client->call('getAllSubnetworkConnections', $bodyParm);
+				echo "<h2>REQUEST :- > </h2><pre>" . htmlspecialchars($this->client->request, ENT_QUOTES). '</pre>';
+				echo "<h2>RESPONSE :- > </h2><pre>" . htmlspecialchars($this->client->response, ENT_QUOTES). '</pre>';
+			if ($this->client->fault) {
 				
-			 if ($this->client->fault) {
-				echo '<h2>Fault while calling getAllSubnetworkConnections ...</h2><pre>';
-				print_r($result);
-				echo '</pre>';
+				throw new Exception("SOAP Fault while calling getAllSubnetworkConnections ". $this->client->fault['faultstring'] );
+				echo '<h2>SOAP Fault while calling getAllSubnetworkConnections ...</h2>';
+			 } else {
+				 
+				 $err = $this->client->getError();
+				 if ($err) {
+					 
+					 throw new Exception($err);
+				 } else {
+					
+					return $result;
+				 }
 			 }
-			 echo "<h2>REQUEST :- > </h2><pre>" . htmlspecialchars($this->client->request, ENT_QUOTES). '</pre>';
-			 echo "<h2>RESPONSE :- > </h2><pre>" . htmlspecialchars($this->client->response, ENT_QUOTES). '</pre>';
 		} else {
+			
 			echo "<h2>Either soap client doesn't exist or any error in service call initializaton or provided soap body is NULL...</h2>";
 			//$log->writeLog("[$filename] : Either soap client doesn't exist or any error in service call initializaton or provided soap body is NULL...");
+			throw new Exception("Either soap client doesn't exist or any error in service call initializaton or provided soap body is NULL...");
 		}
 	}
 	
