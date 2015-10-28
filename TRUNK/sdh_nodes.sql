@@ -375,3 +375,4 @@ INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (375, '2094B7', '5161', '16X', 'H6.51', '000075702E9D', NULL, 'yes', 'yes', '5');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (376, '1284B7', '5169', '16X', 'H6.51', '0000757018FF', NULL, 'yes', 'yes', '5');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (377, '2008G7', '5172', '16X', 'H6.51', '000075700CC1', NULL, 'yes', 'yes', '5');
+Hola
