@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (1, '1223F7', '166', '6500', '7.01', '000318A2BEF9', '10.23.7.15', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (2, '1230G7', '172', '6500', '7.01', '000318ECF3A4', '10.23.6.144', NULL, NULL, 'tallinn');
+=======
+INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (1, '1223F7', '166', '6500', '7.01', '000318A2BEF9', '10.23.7.12', NULL, NULL, 'tallinn');
+INSERT INTO `sdh_nodes` (`node_id`, `node_name`, 
+
+this is my modification - Emanuel Cimpu
+Good code on 2 lines
+`node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (2, '1230G7', '172', '6500', '7.01', '000318ECF3A4', '10.23.6.144', NULL, NULL, 'tallinn');
+>>>>>>> origin/master
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (3, '1241A7', '163', '6500', '7.01', '000318ECFE41', '10.23.6.18', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (4, '1222F7', '165', '6500', '7.01', '000318FAA40E', '10.23.4.178', NULL, NULL, 'tallinn');
-INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (5, '2058A7', '134', '6130', '4.1', '000495064393', '10.23.6.13', NULL, NULL, 'tallinn');
+INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`,
+bettter code on 4th line `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (5, '2058A7', '134', '6130', '4.1', '000495064393', '10.23.6.13', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (6, '1247R7', '10200', '6130', '4.1', '0004950A6702', '172.31.171.229', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (7, '1246R7', '10096', '6130', '4.0', '0004950A6927', '172.31.171.228', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (8, '2059A7', '133', '6130', '4.1', '0004952042E7', '10.23.6.14', NULL, NULL, 'tallinn');
@@ -55,6 +65,7 @@ INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (55, '2066A7', '88', '6110', '5.02', '0004954FFD52', '10.23.6.25', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (56, '2126B7', '120', '6110', '5.02', '0004954FFD57', '10.23.5.59', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (57, '2119B7', '188', '6110', '5.02', '0004954FFD6B', '10.23.5.76', NULL, NULL, 'tallinn');
+some code on later line
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (58, '2061A7', '209', '6110', '5.02', '0004954FFD75', '10.23.6.23', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (59, '2063A7', '112', '6110', '5.0', '0004954FFD7F', '10.23.6.123', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (60, '2062A7', '83', '6110', '5.02', '0004954FFD89', '10.23.6.122', NULL, NULL, 'tallinn');
@@ -375,3 +386,4 @@ INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (375, '2094B7', '5161', '16X', 'H6.51', '000075702E9D', NULL, 'yes', 'yes', '5');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (376, '1284B7', '5169', '16X', 'H6.51', '0000757018FF', NULL, 'yes', 'yes', '5');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (377, '2008G7', '5172', '16X', 'H6.51', '000075700CC1', NULL, 'yes', 'yes', '5');
+Hola
