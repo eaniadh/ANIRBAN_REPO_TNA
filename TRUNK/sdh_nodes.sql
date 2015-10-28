@@ -3,6 +3,7 @@ INSERT INTO `sdh_nodes` (`node_id`, `node_name`,
 
 this is my modification - Emanuel Cimpu
 This is my change - Anirban Adhikary.
+Another modification by Anirban Adhikary.
 Good code on 2 lines
 `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (2, '1230G7', '172', '6500', '7.01', '000318ECF3A4', '10.23.6.144', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (3, '1241A7', '163', '6500', '7.01', '000318ECFE41', '10.23.6.18', NULL, NULL, 'tallinn');
