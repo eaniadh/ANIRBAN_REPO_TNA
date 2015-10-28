@@ -1,4 +1,4 @@
-INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (1, '1223F7', '166', '6500', '7.01', '000318A2BEF9', '10.23.7.15', NULL, NULL, 'tallinn');
+INSERT INTO `sdh_nodes` (`node_id`, `node_name`, `node_ciena_id`, `node_type`, `node_sw_ver`, `node_mac`, `node_ip`, `node_is_managed`, `node_is_assoc`, `node_controller`) VALUES (1, '1223F7', '166', '6500', '7.01', '000318A2BEF9', '10.23.7.12', NULL, NULL, 'tallinn');
 INSERT INTO `sdh_nodes` (`node_id`, `node_name`, 
 
 this is my modification - Emanuel Cimpu
